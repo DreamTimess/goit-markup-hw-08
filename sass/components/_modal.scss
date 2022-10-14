@@ -1,0 +1,421 @@
+@keyframes scale {
+    0% {
+        transform: scaleX(0.5);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.modal {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 528px;
+height: 581px;
+transform: translate(-50%, -50%);
+background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+
+    &__backdrop {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        animation-name: scale;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &--is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    }
+
+    &__button-close {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: inherit;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &--svg {
+            fill: currentColor;
+        }
+    }
+
+    &__block {
+        padding: 40px;
+
+        &--indent {
+            margin-top: 10px;
+        }
+
+        &--relative {
+            position: relative;
+        }
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    &__text-in {
+        display: inline-block;
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: $second-text-color;
+    }
+
+    &__form {
+        width: 448px;
+        height: 40px;
+        padding-left: 42px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: none;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+    &__textarea{
+        margin-top: 10px;
+        width: 448px;
+        height: 144px;
+    }
+
+    &__accept {
+        margin-top: 15px;
+    }
+
+    &__policy-input {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    }
+
+    &__policy {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.71px;
+        color: $second-text-color;
+    }
+
+    &__button{
+        width: 200px;
+        height: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: $white-text-color;
+        background: $color-hover;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        margin: 0 auto;
+        display: block;
+        border: none;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        margin-top: 23px;
+    }
+    &__second {
+        position: relative;
+    }
+
+    &-div-form {
+        position: relative;
+    }
+
+    &__second {
+        margin-top: 10px;
+    }
+}
+
+.modal__button-close:hover .modal__button-close--svg,
+.modal__button-close:focus .modal__button-close--svg {
+    fill: $color-hover;
+}
+
+
+.modal__form:focus {
+    border: 1px solid $color-hover;
+}
+
+.modal__form:focus+.modal__icon {
+    fill: $color-hover;
+}
+
+.main-order-button:hover,
+.main-order-button:focus,
+.modal__button:hover,
+.modal__button:focus {
+    background-color: #188CE8;
+}
+
+
+
+
+
+
+
+
+// Взять недостающие правила 
+
+.modal__block {
+    padding: 40px
+}
+
+.modal__block--relative {
+    position: relative;
+}
+
+.modal-text-in {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $second-text-color;
+}
+
+.modal__form {
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__block--indent {
+    margin-top: 10px;
+}
+
+.second-modal-div {
+    margin-top: 10px;
+}
+
+.modal__text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.form-coment {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    width: 448px;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    width: 100%;
+    margin: 0;
+}
+
+.form-coment::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-modal-label {
+    position: absolute;
+    top: 15%;
+    left: 16px;
+    transform: translateY(-50%);
+}
+
+.svg-icon-modal {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal:focus,
+.modal__label--focus:focus,
+.form-coment:focus {
+    border: 1px solid $color-hover;
+}
+
+.form-modal:focus+.svg-icon-modal {
+    fill: $color-hover;
+}
+
+.icon-X {
+    fill: currentColor;
+}
+
+.button-close:hover .icon-X,
+.button-close:focus .icon-X {
+    fill: $color-hover;
+}
+
+.modal-button {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $white-text-color;
+    background: $color-hover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    margin-top: 23px;
+}
+
+.textarea-modal-div {
+    margin-top: 10px;
+    width: 448px;
+    height: 144px;
+}
+
+.accept {
+    margin-top: 15px;
+}
+
+.policy {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.71px;
+    color: $second-text-color;
+}
+
+.policy-input {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.link-policy {
+    display: flex;
+    position: relative;
+    color: $color-hover;
+    text-decoration: none;
+}
+
+.link-policy::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    border-radius: 1px;
+    background: $color-hover;
+}
+
+.new-chek {
+    display: flex;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-right: 7px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-input:checked~label .new-chek {
+    background-color: #2196f3;
+    background-size: contain;
+    background-origin: border-box;
+    border-color: #2196f3;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes scale {
+    0% {
+        transform: scaleX(0.5);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.main-order-button:hover,
+.main-order-button:focus,
+.modal-button:hover,
+.modal-button:focus {
+    background-color: #188CE8;
+}
+
+.style-list {
+    list-style: none;
+}
+
+.style-list-work {
+    list-style: none;
+}
+
+.style-list-work:nth-child(1n+2) {
+    margin-left: 30px;
+}
