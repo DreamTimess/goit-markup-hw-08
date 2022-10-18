@@ -25,27 +25,27 @@
     fill: $color-hover;
 }
 
-@media screen and (min-width:480px) {
-        .header {
-                border-bottom: 1px solid $border-color;
+@media screen and (min-width:480px) and (max-width:767px) {
+.header {
+    border-bottom: 1px solid $border-color;
         
-                &__container {
-                    width: 480px;
-                    height: 60px;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                    margin-left: 0;
-                    margin-right: 0;
-                    display: flex;
-                    align-items: center;
-                }
+    &__container {
+        width: 480px;
+        height: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        }
         
-                &__navigation {
-                    display: flex;
-                }
+    &__navigation {
+        display: flex;
+        }
         
-                &__logo {
-                    font-family: 'Raleway', sans-serif;
+    &__logo {
+        font-family: 'Raleway', sans-serif;
                     font-weight: 700;
                     font-size: 26px;
                     line-height: 1.19;
@@ -60,9 +60,9 @@
                     }
                 }
         
-                &__list {
-                    display: none;
-                }
+                // &__list {
+                //     display: none;
+                // }
                 //     font-weight: 500;
                 //     font-size: 14px;
                 //     line-height: 1.14;
@@ -102,7 +102,7 @@
                 // }
         
                 &__contacts {
-                    display: none;
+                    // display: none;
                     padding: 0;
                     margin-left: auto;
                     gap: 50px;
@@ -148,13 +148,15 @@
                 margin-right: 10px;
         
     }
+
+    .no-scroll {
+        overflow: hidden;
+    }
+
+    
 }
 
-
-
-
-
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (max-width:1199px) {
         .header {
                 border-bottom: 1px solid $border-color;
         
@@ -277,6 +279,7 @@
         
             }
 }
+
 @media screen and (min-width:1200px) {
     .header {
             border-bottom: 1px solid $border-color;
