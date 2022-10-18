@@ -35,6 +35,8 @@
 }
 
 .js-menu-container {
+    padding-top: 48px;
+    padding-bottom: 48px;
     position: fixed;
     top: 0px;
     left: 0;
@@ -56,6 +58,10 @@
         display: none;
     }
     .js-close-menu {
+        display: none;
+    }
+
+    .mobile-social {
         display: none;
     }
 }
