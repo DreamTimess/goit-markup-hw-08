@@ -25,7 +25,9 @@
     fill: $color-hover;
 }
 
-@media screen and (min-width:480px) and (max-width:767px) {
+
+
+@media screen and (min-width:100px) and (max-width:767px) {
 .header {
     border-bottom: 1px solid $border-color;
         

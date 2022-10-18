@@ -124,9 +124,9 @@
         <div class="container work-photo">
           <h2 class="main-work__h2">Чим ми займаємося</h2>
             <ul class="main-work__ul">
-              <li class="main-work__list"><div class="main-work__block"><p class="main-work__text">Десктопні додатки</p></div><img src="./images/pc.jpg" alt="Компьютер" width="370"></li>
-              <li class="main-work__list"><div class="main-work__block"><p class="main-work__text">Мобільні додатки</p></div><img src="./images/tel.jpg" alt="Телефон" width="370"></li>
-              <li class="main-work__list"><div class="main-work__block"><p class="main-work__text">Дизайнерські рішення</p></div><img src="./images/tablet.jpg" alt="Планшет" width="370"></li>
+              <li class="main-work__list"><div class="main-work__block"><p class="main-work__text">Десктопні додатки</p></div><img srcset="./images/better1-2x.jpg 2x" src="./images/pc.jpg" alt="Компьютер" width="370"></li>
+              <li class="main-work__list"><div class="main-work__block"><p class="main-work__text">Мобільні додатки</p></div><img srcset="./images/better2-2x.jpg 2x" src="./images/tel.jpg" alt="Телефон" width="370"></li>
+              <li class="main-work__list"><div class="main-work__block"><p class="main-work__text">Дизайнерські рішення</p></div><img srcset="./images/better3-2x.jpg 2x" src="./images/tablet.jpg" alt="Планшет" width="370"></li>
             </ul>
         </div>
       </section>
@@ -136,7 +136,11 @@
           <h2 class="main-people-h2">Наша команда</h2>
             <ul class="main-people-list">
               <li class="main-people-personal">
-              <img class="main-people-img" src="./images/person1.jpg" alt="Ігор Дем'яненко" width="270">
+                <picture>
+                  <source srcset="./images/person-mobile1.jpg 1x, ./images/person-mobile1-2x.jpg 2x" media="(max-width: 767px)">
+                  <source srcset="./images/personal1-tab.jpg 1x, ./images/personal1-tab-2x.jpg 2x" media="(max-width: 1199px)">
+                  <source srcset="./images/person1.jpg 1x, ./images/person1-2x.jpg 2x" media="(min-width: 1200px)">
+              <img class="main-people-img" src="./images/person1.jpg" alt="Ігор Дем'яненко" width="270"></picture>
                 <div class="main-people-block">
                   <h3 class="main-people-h3">Ігор Дем'яненко</h3>
                     <p class="main-people-p">Product Designer</p>
@@ -149,7 +153,11 @@
                 </div>
               </li>
           <li class="main-people-personal">
-            <img class="main-people-img"  src="./images/person2.jpg" alt="Ольга Рєпіна" width="270">
+            <picture>
+            <source srcset="./images/person-mobile2.jpg 1x, ./images/person-mobile2-2x.jpg 2x" media="(max-width: 767px)">
+            <source srcset="./images/personal2-tab.jpg 1x, ./images/personal2-tab-2x.jpg 2x" media="(max-width: 1199px)">
+            <source srcset="./images/person2.jpg 1x, ./images/person2-2x.jpg 2x" media="(min-width: 1200px)">
+            <img class="main-people-img"  src="./images/person2.jpg" alt="Ольга Рєпіна" width="270"> </picture>
               <div class="main-people-block">
                 <h3 class="main-people-h3">Ольга Рєпіна</h3>
                   <p class="main-people-p">Frontend Developer</p>
@@ -162,7 +170,11 @@
               </div>
           </li>
           <li class="main-people-personal">
-              <img class="main-people-img"  src="./images/person3.jpg" alt="Микола Тарасов" width="270">
+              <picture>
+              <source srcset="./images/person-mobile3.jpg 1x, ./images/person-mobile3-2x.jpg 2x" media="(max-width: 767px)">
+              <source srcset="./images/personal3-tab.jpg 1x, ./images/personal3-tab-2x.jpg 2x" media="(max-width: 1199px)">
+              <source srcset="./images/person3.jpg 1x, ./images/person3-2x.jpg 2x" media="(min-width: 1200px)">
+              <img class="main-people-img" src="./images/person3.jpg" alt="Микола Тарасов" width="270"> </picture>
                <div class="main-people-block">
                 <h3 class="main-people-h3">Микола Тарасов</h3>
                   <p class="main-people-p">Marketing</p>
@@ -175,7 +187,11 @@
               </div>
           </li>
           <li class="main-people-personal">
-            <img class="main-people-img"  src="./images/person4.jpg" alt="Михайло Єрмаков" width="270">
+              <picture>
+              <source srcset="./images/person-mobile4.jpg 1x, ./images/person-mobile4-2x.jpg 2x" media="(max-width: 767px)">
+              <source srcset="./images/personal4-tab.jpg 1x, ./images/personal4-tab-2x.jpg 2x" media="(max-width: 1199px)">
+              <source srcset="./images/person4.jpg 1x, ./images/person4-2x.jpg 2x" media="(min-width: 1200px)">
+            <img class="main-people-img" src="./images/person4.jpg" alt="Михайло Єрмаков" width="270"></picture>
               <div class="main-people-block">
                 <h3 class="main-people-h3">Михайло Єрмаков</h3>
                   <p class="main-people-p">UI Designer</p>

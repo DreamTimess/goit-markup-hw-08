@@ -1,8 +1,16 @@
-@media screen and (min-width:480px) and (max-width:767px) {
+@mixin retina {
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+@media screen and (min-width:100px) and (max-width:767px) {
 .order {
         max-width: 480px;
         min-height: 400px;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/preview.jpg);
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/preview-mobile.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -11,6 +19,10 @@
         padding-bottom: 118px;
         margin-left: auto;
         margin-right: auto;
+
+        @include retina {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/preview-mobile-2x.jpg);
+        }
 
 
         &__container {
@@ -57,7 +69,7 @@
 .order {
         max-width: 768px;
         min-height: 400px;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/preview.jpg);
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/preview-tab.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -66,6 +78,10 @@
         padding-bottom: 118px;
         margin-left: auto;
         margin-right: auto;
+
+        @include retina {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/preview-tab-2x.jpg);
+            }
 
         &__container {
             width: 768px;
@@ -120,6 +136,10 @@
         padding-bottom: 200px;
         margin-left: auto;
         margin-right: auto;
+
+        @include retina {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/preview-pc-2x.jpg);
+            }
 
         &__container {
             width: 1200px;
