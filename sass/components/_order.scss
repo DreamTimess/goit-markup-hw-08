@@ -6,6 +6,14 @@
     }
 }
 
+.order {
+    @media screen and (min-width:100px) and (max-width:480px) {
+        min-width: 480px;
+    }
+
+}
+
+
 @media screen and (min-width:100px) and (max-width:767px) {
 .order {
         max-width: 480px;
